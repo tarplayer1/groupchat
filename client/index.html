@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clique • by Tarplayer1</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h2>Join <span class="clique-brand">Clique</span></h2>
+            <input type="text" id="user-id" placeholder="Your ID" required>
+            <input type="text" id="username" placeholder="Your Name" required>
+            <div class="avatar-select">
+                <p>Choose Avatar:</p>
+                <div class="avatar-options">
+                    <img src="avatars/1.png" data-id="1" class="avatar-option">
+                    <img src="avatars/2.png" data-id="2" class="avatar-option">
+                    <img src="avatars/3.png" data-id="3" class="avatar-option">
+                </div>
+            </div>
+            <button id="join-btn">Enter Clique</button>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2><span class="clique-brand">Clique</span> <small>by Tarplayer1</small></h2>
+            <div class="header-controls">
+                <button id="toggle-users">👥 Hide Users</button>
+                <span id="online-count">0 online</span>
+            </div>
+        </div>
+        
+        <div class="user-list-container" id="user-list-container">
+            <h3>Active Members</h3>
+            <ul id="user-list"></ul>
+        </div>
+        
+        <div id="chat-messages" class="chat-messages"></div>
+        
+        <div class="input-area">
+            <div class="file-input-container">
+                <button id="file-btn" title="Upload File">📁</button>
+                <input type="file" id="file-input" accept="image/*, video/*, .pdf, .doc, .docx, .txt">
+            </div>
+            <input type="text" id="message-input" placeholder="Message in Clique...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
